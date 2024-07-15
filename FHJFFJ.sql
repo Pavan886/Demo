@@ -1,3 +1,10 @@
-use sample_emp_db
+USE empl_info_12
+select * from empl_info
+create proc Proc_1
+@name as varchar(50), @id as int
+as
+begin
+select name, id from empl_info where name=@name and id=@id
+end
 
-create table sample_info1( ID INT, NAME VARCHAR(50))
+
